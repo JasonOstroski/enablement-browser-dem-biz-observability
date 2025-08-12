@@ -3,21 +3,15 @@
 export SECONDS=0
 source .devcontainer/util/source_framework.sh
 
-bindFunctionsInShell
-
-setupAliases
+setUpTerminal
 
 # Kind cluster not needed
 #startKindCluster
 
-# k9s not needed
-#installK9s
+installK9s
 
 #TODO: BeforeGoLive: uncomment this. This is only needed for professors to have the Mkdocs live in the container
 #installMkdocs
-
-# Dynatrace Credentials are read and saved as a configmap for ease of use
-#dynatraceEvalReadSaveCredentials
 
 # Dynatrace Operator can be deployed automatically
 #dynatraceDeployOperator
@@ -30,7 +24,7 @@ setupAliases
 # The TODO App will be deployed as a sample
 #deployTodoApp
 
-# The Astroshop keeping changes of demo.live needs certmanagerdocker
+# The Astroshop keeping changes of demo.live needs certmanager
 #certmanagerInstall
 #certmanagerEnable
 #deployAstroshop
