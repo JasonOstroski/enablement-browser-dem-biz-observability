@@ -13,13 +13,9 @@ We've also provided blank templates so you can use the same methodology to build
 
 ## Configure Real User Monitoring
 
-[Download Notebook](https://github.com/dynatrace-wwse/enablement-browser-dem-biz-observability/blob/main/docs/assets/dynatrace/notebook/Customer_Journey.json){target=_blank}
+[Download Workshop Notebook](https://github.com/dynatrace-wwse/enablement-browser-dem-biz-observability/blob/main/docs/assets/dynatrace/notebook/Workshop_Customer_Journey.json){target=_blank}
 
-In your Dynatrace tenant, open the **Notebooks** app.  Click `Upload` to upload the `Customer_Journey` notebook.
-
-Begin by modifying the first markdown section with the details about your company, `Company Name` and `Website URL`.  At the end of the URL, add a `*` so that it ends with `/*`.
-
-![Company Details](./img/real-user_company_details.png)
+[Notebook for Tailored Demos](https://github.com/dynatrace-wwse/enablement-browser-dem-biz-observability/blob/main/docs/assets/dynatrace/notebook/Blank_Customer_Journey.json){target=_blank}
 
 ### Create Agentless RUM Application
 
