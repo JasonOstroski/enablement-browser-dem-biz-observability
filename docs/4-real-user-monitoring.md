@@ -85,28 +85,30 @@ In the **RUM JS Tag URL**, copy and paste the source URL from your notebook for 
 
 ![Locate RUM Beacon](./img/real-user_configure_extension_hard_refresh_find_beacon.gif)
 
-!!! tip "Troubleshooting"
-    If you're not seeing beacons with HTTP status 200, try opening the website in a new tab or window and validate the following:
-    1. The Dynatrace RUM JavaScript tag is injected on the page, in the `<header>` of the html
-    2. There aren't any CSP errors in the `Console`
-    3. The URL pattern and source URL are correct in the extension configuration
+Now click around on the site and check in Dynatrace to validate data is coming in. Once validated, navigate from the start of the customer journey to the end. When you start the journey, tag your user session with your user identifier.  When you end your journey, manually end the journey with the console command.
 
-Now that you've validated that real user monitoring is working, navigate from the start of the customer journey to the end.  Be sure to keep Developer Tools open the entire time so that the local overrides take effect.  When you start the journey, tag your user session with your user identifier.  When you end your journey, manually end the journey with the console command.
 
 Tag User:
 ```javascript
 dtrum.identifyUser('user-name')
 ```
 
+Normally, user sessions end on one of the ways [documented here](https://docs.dynatrace.com/docs/shortlink/user-session#user-session-end){target=_blank}.  However, we want to be able to create a bunch of sessions quickly without having to close the browser or wait for inactivity. To do this, navigate to the console in Chrome Developer Tools and type `dtrum.endSession()` and hit enter to end the session manually.
+
 End Session:
 ```javascript
 dtrum.endSession()
 ```
 
+!!! tip "Troubleshooting"
+    If you're not seeing beacons with HTTP status 200, try opening the website in a new tab or window and validate the following:
+    1. The Dynatrace RUM JavaScript tag is injected on the page, in the `<header>` of the html
+    2. There aren't any CSP errors in the `Console`
+    3. The URL pattern and source URL are correct in the extension configuration
+
+
 ![Complete Customer Journey](./img/real-user_configure_extension_complete_customer_journey.gif)
 
-!!! tip "Ending Sessions"
-    Normally, user sessions end on one of the ways [documented here](https://docs.dynatrace.com/docs/shortlink/user-session#user-session-end){target=_blank}.  However, we want to be able to create a bunch of sessions quickly without having to close the browser or wait for inactivity. To do this, navigate to the console in Chrome Developer Tools and type `dtrum.endSession()` and hit enter to end the session manually.
 
 ## Session Replay
 
