@@ -3,8 +3,7 @@
 
 Dynatrace Real User Monitoring (RUM) gives you the power to know your customers by providing performance analysis in real time. This includes all user actions taken and how the various actions impact performance. You can also easily identify problems or errors that occurred as well as user experience ratings, geolocation breakdowns, and much more. You can also gain insight into the behavior of your users. This among others includes the number of customers who return to your site. With Dynatrace RUM, you have the context over time and immediate analysis to the complete picture of your end-user experience.
 
-In this workshop, we'll be using the following DEM Strike & Save Ecom Website to streamline some of the steps. 
-https://www.demstrike-playground.com/
+In this workshop, we'll be using the following DEM Strike & Save Ecom Website to streamline some of the steps: https://www.demstrike-playground.com/
 
 We've also provided blank templates so you can use the same methodology to build a tailored demo with your customer or prospect's website and customer journey. 
 
