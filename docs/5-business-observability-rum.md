@@ -17,28 +17,30 @@ Now that we understand the customer's digital experience, thanks to Real User Mo
 
 If you haven't already, download the `Customer_Journey` notebook.
 
-[Download Notebook](https://github.com/dynatrace-wwse/enablement-browser-dem-biz-observability/blob/main/docs/assets/dynatrace/notebook/Customer_Journey.json){target=_blank}
+[Download Workshop Notebook](https://github.com/dynatrace-wwse/enablement-browser-dem-biz-observability/blob/main/docs/assets/dynatrace/notebook/Workshop_Customer_Journey.json){target=_blank}
 
 In your Dynatrace tenant, open the **Notebooks** app.  Click `Upload` to upload the `Customer_Journey` notebook.
 
-Locate the **Customer Journey** markdown section.  Edit the markdown section and update the values with the details from your selected company's digital customer journey.
+Locate the **Customer Journey** markdown section.  This markdown section includes the steps for purchasing products on the DEM Strike & Save webaite. We've already filled out the details for you, but you when you want to build this for your prospect or customer, you can use the following blank template to enter the customer journey steps. 
 
-Google Travel Track Flight example:
+[Notebook for Tailored Demos](https://github.com/dynatrace-wwse/enablement-browser-dem-biz-observability/blob/main/docs/assets/dynatrace/notebook/Blank_Customer_Journey.json){target=_blank}
 
-* Journey Name: `Track Flight`
-* Step 1: `Travel Homepage`
-* Step 2: `Flight Search`
-* Step 3: `Search Results`
-* Step 4: `Select Flight`
-* Step 5: `Track Flight`
+DEM Strike Purchase Journey example:
 
-Locate the **BizEvent Template Example** markdown section.  Here you will find the code snippet example for sending a BizEvent using the Dynatrace RUM JavaScript agent/sdk.  You'll adapt the `attributes` to that of your customer journey.
+* Journey Name: `DEM Strike Purchase Journey`
+* Step 1: `Product Page`
+* Step 2: `Add to Cart`
+* Step 3: `Cart Page`
+* Step 4: `Checkout Page`
+* Step 5: `Order Received`
 
-Locate the **Customer Journey BizEvents** markdown section.  Below this section you'll find (10) sections; one markdown section with a code snippet and one DQL query for bizevents for each step of the customer journey.
+Locate the **BizEvent Template Example** markdown section.  Here you will find the code snippet example for sending a BizEvent using the Dynatrace RUM JavaScript agent/sdk. 
 
-Modify each section and replace the placeholder names with the actual values for your customer journey.  It's recommended that you go through the customer journey as you are making these changes so that you can identify the actual page names and potential custom properties that are relevant for each step.  However, the custom properties are optional - but recommended to add more business value.
+Locate the **Customer Journey BizEvents** markdown section.  Below this section you'll find (10) sections; one markdown section with a code snippet and one DQL query for bizevents for each step of the customer journey. We've done the hard work for you and pre-populated all of the biz event steps and DQL queries for the DEM Strike Purchase Journey.
 
-Once you've modified the code snippet, start a new browser session and move through the customer journey.  Pause at each step of the journey and use the developer tools console to send a BizEvent with the correct payload.
+On another browser tab, navigate through a customer journey on the DEM Strike website and update the notebook with the attributes for each step to match your journey (page name, products, amounts, etc.) This helps us bring the demo to life and provide business context to the events.
+
+Once you've modified the code snippets, start a new browser session and move through the customer journey.  Pause at each step of the journey and use the developer tools console to send a BizEvent with the correct payload.
 
 ![Send BizEvent](./img/rum-biz-obs_customer_journey_send_bizevent.gif)
 
@@ -122,11 +124,11 @@ fetch bizevents
 
 ![Business Analytics](./img/rum-biz-obs_customer_journey_business_analytics.png)
 
-Wow!  What a powerful query that let's us understand everything about the customer journey.  Business Observability and Analytics focuses on the business outcomes and business KPIs.  You don't need to use BizEvents to understand performance, availability, reliability, or correctness - that's what real user monitoring and session replay does for you natively!  This example is very powerful, but wouldn't it be nice if Dynatrace would provide this level of analysis automatically without having to write long DQL queries?  Great news, it can!  In the next section we'll explore Business Flows and Business Observability Automation.
+Wow!  What a powerful query that let's us understand everything about the customer journey.  Business Observability focuses on the business outcomes and business KPIs needed to make data-driven decisions and when used in collaboration with DEM, ties customer experience to business outcomes.
 
 ## Continue
+But what about business processes that go beyond the customer journey? What if we want to generate a ton of business data for wowing customers with insights in dashboards? In the next section we'll do just that, including exploring Business Flows, Dashboarding, and generating data.
 
-In the next section, we'll automate business observability with Workflows in Dynatrace.
 
 <div class="grid cards" markdown>
 - [Continue to Business Observability Automation:octicons-arrow-right-24:](6-business-observability-automation.md)

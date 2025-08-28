@@ -3,19 +3,19 @@
 
 Dynatrace Real User Monitoring (RUM) gives you the power to know your customers by providing performance analysis in real time. This includes all user actions taken and how the various actions impact performance. You can also easily identify problems or errors that occurred as well as user experience ratings, geolocation breakdowns, and much more. You can also gain insight into the behavior of your users. This among others includes the number of customers who return to your site. With Dynatrace RUM, you have the context over time and immediate analysis to the complete picture of your end-user experience.
 
+In this workshop, we'll be using the following DEM Strike & Save Ecom Website to streamline some of the steps: https://www.demstrike-playground.com/
+
+We've also provided blank templates so you can use the same methodology to build a tailored demo with your customer or prospect's website and customer journey. 
+
 <div class="grid cards" markdown>
 - [Learn More:octicons-arrow-right-24:](https://docs.dynatrace.com/docs/observe/digital-experience/rum-concepts/rum-overview#real-user-monitoring){target="_blank"}
 </div>
 
 ## Configure Real User Monitoring
 
-[Download Notebook](https://github.com/dynatrace-wwse/enablement-browser-dem-biz-observability/blob/main/docs/assets/dynatrace/notebook/Customer_Journey.json){target=_blank}
+[Download Workshop Notebook](https://github.com/dynatrace-wwse/enablement-browser-dem-biz-observability/blob/main/docs/assets/dynatrace/notebook/Workshop_Customer_Journey.json){target=_blank}
 
-In your Dynatrace tenant, open the **Notebooks** app.  Click `Upload` to upload the `Customer_Journey` notebook.
-
-Begin by modifying the first markdown section with the details about your company, `Company Name` and `Website URL`.  At the end of the URL, add a `*` so that it ends with `/*`.
-
-![Company Details](./img/real-user_company_details.png)
+[Notebook for Tailored Demos](https://github.com/dynatrace-wwse/enablement-browser-dem-biz-observability/blob/main/docs/assets/dynatrace/notebook/Blank_Customer_Journey.json){target=_blank}
 
 ### Create Agentless RUM Application
 
@@ -82,34 +82,23 @@ In the **RUM JS Tag URL**, copy and paste the source URL from your notebook for 
 
 ![Set URL Pattern and Script Source](./img/real-user_configure_extension_set_url_source.png)
 
-**Content Security Policy CSP**
-
-You will almost certainly encounter sites that restrict remote content loading and requests using the [Content Security Policy (CSP)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CSP){target=_blank}. 
-
-Content Security Policy (CSP) is a feature that helps to prevent or minimize the risk of certain types of security threats. It consists of a series of instructions from a website to a browser, which instruct the browser to place restrictions on the things that the code comprising the site is allowed to do.
-
-The primary use case for CSP is to control which resources, in particular JavaScript resources, a document is allowed to load. This is mainly used as a defense against [cross-site scripting (XSS)](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting){target=_blank} attacks, in which an attacker is able to inject malicious code into the victim's site.
-
-Since we are injecting our RUM locally via an extension, you will see these warnings in your Chrome Developer Tools Console.
-
-### Configure CSP Overrides
-
-!!! warning "Overrides Active with Developer Tools Only"
-    Enabling these local overrides only function while the Chrome Developer Tools are open.  Be sure to leave them open for the entire time that you're doing this exercise and browsing the website.
-
-Navigate to the website (you should be there already).
-
-Open the Developer Tools `View > Developer > Developer Tools`. Switch to the `Sources` tab, then `Overrides` sub-tab.
-
-Click `Select folder for overrides`.  Navigate to the `overrides` directory **in your unzipped extension folder** and press `Select`.
-
-If prompted to allow local edit, click `Edit`.
-
-![Add Local Overrides](./img/real-user_configure_extension_add_local_overrides.gif)
-
-Click and hold the refresh button and select `Empty cache and hard reload`.  As the page loads, navigate to the `Network` tab of Developer Tools and locate the Dynatrace RUM beacons.  You can filter on `Fetch/XHR` request types and the pattern `bf?`.  Validate that you're seeing HTTP status **200**.
 
 ![Locate RUM Beacon](./img/real-user_configure_extension_hard_refresh_find_beacon.gif)
+
+Now click around on the site and check in Dynatrace to validate data is coming in. Once validated, navigate from the start of the customer journey to the end. When you start the journey, tag your user session with your user identifier.  When you end your journey, manually end the journey with the console command.
+
+
+Tag User:
+```javascript
+dtrum.identifyUser('user-name')
+```
+
+Normally, user sessions end on one of the ways [documented here](https://docs.dynatrace.com/docs/shortlink/user-session#user-session-end){target=_blank}.  However, we want to be able to create a bunch of sessions quickly without having to close the browser or wait for inactivity. To do this, navigate to the console in Chrome Developer Tools and type `dtrum.endSession()` and hit enter to end the session manually.
+
+End Session:
+```javascript
+dtrum.endSession()
+```
 
 !!! tip "Troubleshooting"
     If you're not seeing beacons with HTTP status 200, try opening the website in a new tab or window and validate the following:
@@ -117,22 +106,9 @@ Click and hold the refresh button and select `Empty cache and hard reload`.  As 
     2. There aren't any CSP errors in the `Console`
     3. The URL pattern and source URL are correct in the extension configuration
 
-Now that you've validated that real user monitoring is working, navigate from the start of the customer journey to the end.  Be sure to keep Developer Tools open the entire time so that the local overrides take effect.  When you start the journey, tag your user session with your user identifier.  When you end your journey, manually end the journey with the console command.
-
-Tag User:
-```javascript
-dtrum.identifyUser('user-name')
-```
-
-End Session:
-```javascript
-dtrum.endSession()
-```
 
 ![Complete Customer Journey](./img/real-user_configure_extension_complete_customer_journey.gif)
 
-!!! tip "Ending Sessions"
-    Normally, user sessions end on one of the ways [documented here](https://docs.dynatrace.com/docs/shortlink/user-session#user-session-end){target=_blank}.  However, we want to be able to create a bunch of sessions quickly without having to close the browser or wait for inactivity. To do this, navigate to the console in Chrome Developer Tools and type `dtrum.endSession()` and hit enter to end the session manually.
 
 ## Session Replay
 

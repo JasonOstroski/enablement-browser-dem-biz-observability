@@ -9,7 +9,7 @@ You will need full administrator access to a Dynatrace SaaS tenant with a DPS li
 * Install Dynatrace Session Replay Extension for Chrome
 * Install Business Flow app
 * Configure Workflow authorization settings
-* Identify public-facing business website
+* Identify public-facing business website (Update)
     - Identify multi-page customer journey
 * Identify multi-step business process with Microsoft CoPilot
 
