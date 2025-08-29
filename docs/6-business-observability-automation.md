@@ -72,7 +72,7 @@ Download and save the modified code snippet.
 
 ### Upload and Modify Workflow
 
-In your Dynatrace tenant, launch the **Workflows** app.  From the `All workflows` tab, click on `Upload` and provide the Workflow template file that you downloaded (`wf_business_data_generator_3008.json`).
+In your Dynatrace tenant, launch the **Workflows** app.  From the `All workflows` tab, click on `Upload` and provide the Workflow template file that you downloaded (`wftpl_business_data_generator.yaml`).
 
 ![Workflow Upload](./img/biz-obs-auto_workflows_upload_workflow.png)
 
