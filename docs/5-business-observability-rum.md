@@ -42,7 +42,7 @@ On another browser tab, navigate through a customer journey on the DEM Strike we
 
 Once you've modified the code snippets, start a new browser session and move through the customer journey.  Pause at each step of the journey and use the developer tools console to send a BizEvent with the correct payload.
 
-![Send BizEvent](./img/rum-biz-obs_customer_journey_send_bizevent.gif)
+![Send BizEvent](./img/rum-biz-obs_customer_journey_send_bizevent.png)
 
 After sending the BizEvent, wait a minute (usually sooner) and query the BizEvents in the notebook.
 
