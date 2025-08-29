@@ -15,7 +15,7 @@ In order to demonstrate end-to-end business process observability in this lab, w
 
 Download the Workflow template and configuration code snippet.
 
-[Workflow Template](https://github.com/dynatrace-wwse/enablement-browser-dem-biz-observability/blob/main/docs/assets/dynatrace/workflow/wf_business_data_generator_3008.json){target=_blank}
+[Workflow Template](https://github.com/dynatrace-wwse/enablement-browser-dem-biz-observability/blob/main/docs/assets/dynatrace/workflow/wftpl_business_data_generator.yaml){target=_blank}
 
 [Configuration Code Snippet](https://github.com/dynatrace-wwse/enablement-browser-dem-biz-observability/blob/main/docs/assets/dynatrace/workflow/config.js){target=_blank}
 
