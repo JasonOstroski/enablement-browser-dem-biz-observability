@@ -29,7 +29,7 @@
         {
             "id": "2f5e05ad-da43-4c4a-8c6a-41dfd119c5a5",
             "type": "markdown",
-            "markdown": "### Step 1 - Product Page\n```\nlet attributes = {\n  \"event.provider\": \"dem-strike-web\",\n  \"event.category\": \"strike-purchase-journey\",\n  \"event.name\": \"view-product-page\",\n  \"page\": \"product-page\",\n  \"customer.status\": \"logged-in\",\n  \"customer.loyalty.level\": \"gold\",\n  \"product.id\": \"SKU12345\",\n  \"product.name\": \"Wireless Noise-Canceling Headphones\",\n  \"product.category\": \"Audio\",\n  \"product.price\": 199.99,\n  \"product.availability\": \"in-stock\",\n  \"customer.segment\": \"tech-enthusiast\",\n  \"user.unique.id\": \"abc123xyz\"\n};\n\ndynatrace.sendBizEvent('strike-purchase-journey.view-product-page', attributes);\n```"
+            "markdown": "### Step 1 - Product Page\n```\nlet attributes = {\n  \"event.provider\": \"dem-strike-web\",\n  \"event.category\": \"strike-purchase-journey\",\n  \"event.name\": \"view-product-page\",\n  \"page\": \"product-page\",\n  \"customer.status\": \"logged-in\",\n  \"customer.loyalty.level\": \"gold\",\n  \"product.id\": \"SKU12345\",\n  \"product.name\": \"Wireless Noise-Canceling Headphones\",\n  \"product.category\": \"Audio\",\n  \"product.price\": 248.99,\n  \"product.availability\": \"in-stock\",\n  \"customer.segment\": \"tech-enthusiast\",\n  \"user.unique.id\": \"abc123xyz\"\n};\n\ndynatrace.sendBizEvent('strike-purchase-journey.view-product-page', attributes);\n```"
         },
         {
             "id": "c434760b-4ba2-4fb9-878f-68c9232d5510",
@@ -66,7 +66,7 @@
         {
             "id": "c67c59aa-d04e-4ee4-8567-c9baee7f171a",
             "type": "markdown",
-            "markdown": "### Step 2 - Add to Cart\n```\nlet attributes = {\n  \"event.provider\": \"dem-strike-web\",\n  \"event.category\": \"strike-purchase-journey\",\n  \"event.name\": \"add-to-cart\",\n  \"page\": \"product-page\",\n  \"customer.status\": \"logged-in\",\n  \"customer.loyalty.level\": \"gold\",\n  \"product.id\": \"SKU12345\",\n  \"product.name\": \"Wireless Noise-Canceling Headphones\",\n  \"product.category\": \"Audio\",\n  \"product.price\": 199.99,\n  \"cart.id\": \"cart789\",\n  \"cart.item.count\": 1,\n  \"customer.segment\": \"tech-enthusiast\",\n  \"user.unique.id\": \"abc123xyz\"\n};\n\ndynatrace.sendBizEvent('strike-purchase-journey.add-to-cart', attributes);\n```"
+            "markdown": "### Step 2 - Add to Cart\n```\nlet attributes = {\n  \"event.provider\": \"dem-strike-web\",\n  \"event.category\": \"strike-purchase-journey\",\n  \"event.name\": \"add-to-cart\",\n  \"page\": \"product-page\",\n  \"customer.status\": \"logged-in\",\n  \"customer.loyalty.level\": \"gold\",\n  \"product.id\": \"SKU12345\",\n  \"product.name\": \"Wireless Noise-Canceling Headphones\",\n  \"product.category\": \"Audio\",\n  \"product.price\": 248.99,\n  \"cart.id\": \"cart789\",\n  \"cart.item.count\": 1,\n  \"customer.segment\": \"tech-enthusiast\",\n  \"user.unique.id\": \"abc123xyz\"\n};\n\ndynatrace.sendBizEvent('strike-purchase-journey.add-to-cart', attributes);\n```"
         },
         {
             "id": "a1a9c798-d662-496d-a875-20db6767aaf7",
@@ -103,7 +103,7 @@
         {
             "id": "51ea7687-e7f1-4e54-aeb8-3c9771fbcd84",
             "type": "markdown",
-            "markdown": "### Step 3 - Cart Page\n```\nlet attributes = {\n  \"event.provider\": \"dem-strike-web\",\n  \"event.category\": \"strike-purchase-journey\",\n  \"event.name\": \"cart-page-view\",\n  \"page\": \"cart-page\",\n  \"customer.status\": \"logged-in\",\n  \"customer.loyalty.level\": \"gold\",\n  \"cart.id\": \"cart789\",\n  \"cart.item.count\": 2,\n  \"cart.total.value\": 399.98,\n  \"customer.segment\": \"tech-enthusiast\",\n  \"user.unique.id\": \"abc123xyz\"\n};\n\ndynatrace.sendBizEvent('strike-purchase-journey.cart-page-view', attributes);\n```"
+            "markdown": "### Step 3 - Cart Page\n```\nlet attributes = {\n  \"event.provider\": \"dem-strike-web\",\n  \"event.category\": \"strike-purchase-journey\",\n  \"event.name\": \"cart-page-view\",\n  \"page\": \"cart-page\",\n  \"customer.status\": \"logged-in\",\n  \"customer.loyalty.level\": \"gold\",\n  \"cart.id\": \"cart789\",\n  \"cart.item.count\": 2,\n  \"cart.total.value\": 497.98,\n  \"customer.segment\": \"tech-enthusiast\",\n  \"user.unique.id\": \"abc123xyz\"\n};\n\ndynatrace.sendBizEvent('strike-purchase-journey.cart-page-view', attributes);\n```"
         },
         {
             "id": "123a05a3-7271-4186-8d4f-3cd51468ced5",
@@ -140,7 +140,7 @@
         {
             "id": "42171185-2a8b-487f-890e-81780be64470",
             "type": "markdown",
-            "markdown": "### Step 4 - Checkout Page View\n```\nlet attributes = {\n  \"event.provider\": \"dem-strike-web\",\n  \"event.category\": \"strike-purchase-journey\",\n  \"event.name\": \"checkout-page-view\",\n  \"page\": \"checkout-page\",\n  \"customer.status\": \"logged-in\",\n  \"customer.loyalty.level\": \"gold\",\n  \"cart.id\": \"cart789\",\n  \"cart.total.value\": 399.98,\n  \"checkout.step\": \"payment\",\n  \"customer.segment\": \"tech-enthusiast\",\n  \"user.unique.id\": \"abc123xyz\"\n};\n\ndynatrace.sendBizEvent('strike-purchase-journey.checkout-page-view', attributes);\n```"
+            "markdown": "### Step 4 - Checkout Page View\n```\nlet attributes = {\n  \"event.provider\": \"dem-strike-web\",\n  \"event.category\": \"strike-purchase-journey\",\n  \"event.name\": \"checkout-page-view\",\n  \"page\": \"checkout-page\",\n  \"customer.status\": \"logged-in\",\n  \"customer.loyalty.level\": \"gold\",\n  \"cart.id\": \"cart789\",\n  \"cart.total.value\": 497.98,\n  \"checkout.step\": \"payment\",\n  \"customer.segment\": \"tech-enthusiast\",\n  \"user.unique.id\": \"abc123xyz\"\n};\n\ndynatrace.sendBizEvent('strike-purchase-journey.checkout-page-view', attributes);\n```"
         },
         {
             "id": "f7399d4a-534e-4ba3-856f-9d43c71dc46c",
@@ -177,7 +177,7 @@
         {
             "id": "dc0f5b95-5460-4375-85c0-ed5d0d5f8cc8",
             "type": "markdown",
-            "markdown": "### Step 5 - Order Received\n```\nlet attributes = {\n  \"event.provider\": \"dem-strike-web\",\n  \"event.category\": \"strike-purchase-journey\",\n  \"event.name\": \"order-received\",\n  \"page\": \"order-confirmation\",\n  \"customer.status\": \"logged-in\",\n  \"customer.loyalty.level\": \"gold\",\n  \"order.id\": \"order456\",\n  \"order.total.value\": 399.98,\n  \"order.item.count\": 2,\n  \"order.payment.method\": \"credit-card\",\n  \"order.shipping.method\": \"standard\",\n  \"customer.segment\": \"tech-enthusiast\",\n  \"user.unique.id\": \"abc123xyz\"\n};\n\ndynatrace.sendBizEvent('strike-purchase-journey.order-received', attributes);\n```"
+            "markdown": "### Step 5 - Order Received\n```\nlet attributes = {\n  \"event.provider\": \"dem-strike-web\",\n  \"event.category\": \"strike-purchase-journey\",\n  \"event.name\": \"order-received\",\n  \"page\": \"order-confirmation\",\n  \"customer.status\": \"logged-in\",\n  \"customer.loyalty.level\": \"gold\",\n  \"order.id\": \"order456\",\n  \"order.total.value\": 497.98,\n  \"order.item.count\": 2,\n  \"order.payment.method\": \"credit-card\",\n  \"order.shipping.method\": \"standard\",\n  \"customer.segment\": \"tech-enthusiast\",\n  \"user.unique.id\": \"abc123xyz\"\n};\n\ndynatrace.sendBizEvent('strike-purchase-journey.order-received', attributes);\n```"
         },
         {
             "id": "adf53689-a12b-4d0d-9dec-91e3e6264d20",
